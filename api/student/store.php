@@ -13,5 +13,14 @@
     // )
 
     $students->store($data);
+    $result = [
+        'msg' => 'ok',
+        'data' => $data,
+        'ref' => 'localhost/images/book'
+    ];
+
+    echo json_encode($result);
+    
+
 
 ?>

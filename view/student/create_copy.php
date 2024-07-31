@@ -1,12 +1,3 @@
-<?php
-include "../../class/base.php";
-
-$students = new DB('students');
-$id = $_GET['id'];
-$data = $students->getByID($id);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -26,28 +17,23 @@ $data = $students->getByID($id);
 
     <div class="container mt-3">
         <h3>
-            Student Edit
+            Student Create
         </h3>
     </div>
     <div class="container mt-3">
-        <form action="../../api/student/update.php" method="get" id="myForm" enctype="multipart/form-data">
+        <form action="../../api/student/store.php" method="get">
             <div class="row">
-
-                <div class="col-12 mt-3 text-primary">
-                    <label for="">id = <?= $data['id'] ?></label>
-                </div>
                 <div class="col-12 mt-3">
                     <label for="">name</label>
-                    <input type="text" class="form-control" name="name" id="" value="<?= $data['name'] ?>">
+                    <input type="text" class="form-control" name="name" id="">
                 </div>
                 <div class="col-12 mt-3">
                     <label for="">mobile</label>
-                    <input type="text" class="form-control" name="mobile" id="" value="<?= $data['mobile'] ?>">
+                    <input type="text" class="form-control" name="mobile" id="">
                 </div>
                 <div class="col-12 mt-3">
-                    <input type="hidden" class="form-control" name="id" id="" value="<?= $data['id'] ?>">
                     <div class="d-grid gap-2">
-                        <button class="btn btn-outline-warning" type="submit">Button</button>
+                        <button class="btn btn-primary" type="submit">Button</button>
                     </div>
                 </div>
             </div>
@@ -62,7 +48,13 @@ $data = $students->getByID($id);
     <!-- js or jqery -->
     <script>
         $(document).ready(function() {
-
+            $.ajax({
+                type: "get",
+                url: "url",
+                data: "data",
+                dataType: "json",
+                success: function(response) {}
+            });
 
         });
         // jquery end

@@ -71,14 +71,14 @@ $data = $students->getAllSetRank();
         <!-- row -->
         <div class="row">
             <div class="text-start">
-            <a class="btn btn-outline-primary" href="../teacher/index.php">Go Teachers List</a>       
+                <a class="btn btn-primary" href="../student/index.php">Go Students List</a>       
             </div>
         </div>
         <!-- row end -->
 
          <!-- row -->
         <div class="row">
-            <h2>Students List</h2>
+            <h2>Teachers List</h2>
             <p>The .table-bordered class adds borders on all sides of the table and the cells:</p>
         </div>
         <!-- row end -->
